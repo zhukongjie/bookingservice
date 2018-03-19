@@ -1,0 +1,6 @@
+com\alibaba\spring\utils\DateUtils.class
+com\alibaba\spring\utils\HttpUtils.class
+com\alibaba\spring\utils\HttpUtils$TimeOutCallback.class
+com\alibaba\spring\utils\ObjectUtils.class
+com\alibaba\spring\utils\JsonUtils.class
+com\alibaba\spring\utils\logger\ILogger.class

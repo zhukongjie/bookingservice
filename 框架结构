@@ -1,0 +1,32 @@
+源码管理工具 git
+
+1. web ui -> html+css+js
+2. web -> service-> dao  (web跨域调用service,每层用的都是接口对接)
+
+
+web 需要引入的包->站点
+
+structs
+
+service 需要引入的包
+
+spring-boot
+
+
+
+dao层需要引入的包
+
+mysql
+
+java日志
+
+
+
+
+
+
+难点：日志框架需要用到simple
+      异常处理
+      缓存 redis,本地缓存暂时不用（容易oom）
+
+
