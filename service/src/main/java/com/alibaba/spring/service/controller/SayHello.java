@@ -25,7 +25,7 @@ public class SayHello {
     }
 
     @RequestMapping(value = "/getWorld", method = RequestMethod.POST)
-    public HellowordBean getHelloWorld(@ModelAttribute HellowordBean hellowordBean) {
+    public HellowordBean getHelloWorld(@RequestBody HellowordBean hellowordBean) {
 
         return hellowordBean;
 

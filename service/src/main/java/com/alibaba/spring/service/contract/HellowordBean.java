@@ -7,7 +7,7 @@ public class HellowordBean {
 
     private String hello;
 
-    private Integer beanCount;
+
 
 
     public String getHello() {
@@ -18,11 +18,4 @@ public class HellowordBean {
         this.hello = hello;
     }
 
-    public Integer getBeanCount() {
-        return beanCount;
-    }
-
-    public void setBeanCount(Integer beanCount) {
-        this.beanCount = beanCount;
-    }
 }
