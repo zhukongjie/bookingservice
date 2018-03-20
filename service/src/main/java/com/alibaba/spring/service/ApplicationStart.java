@@ -18,6 +18,6 @@ public class ApplicationStart {
         SpringApplication.run(ApplicationStart.class, args);
 
         System.setProperty("java.awt.headless", "false");
-        Desktop.getDesktop().browse(new URI("http://localhost"));
+        Desktop.getDesktop().browse(new URI("http://localhost:8080/getworld"));
     }
 }
