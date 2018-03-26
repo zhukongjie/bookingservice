@@ -31,6 +31,6 @@
         <property name="sfhow_sql">true</property>
         <!-- 将SQL脚本进行格式化后再输出 -->
         <property name="hibernate.format_sql">true</property>
-        <mapping resource="com.alibaba.spring.dap.entity/mokeyhouse.hbm.xml"/>
+        <mapping resource="com/alibaba/spring/dao/entity/mokeyhouse.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

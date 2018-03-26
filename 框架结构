@@ -1,8 +1,15 @@
 源码管理工具 git
 
-1. web ui -> html+css+js
-2. web -> service-> dao  (web跨域调用service,每层用的都是接口对接)
+1. web
 
+ui -> html+css+js
+SpringMvc  -> 架构
+
+2. service  (web跨域调用service,每层用的都是接口对接)
+
+dubbo 框架
+
+3. dao
 
 web 需要引入的包->站点
 
