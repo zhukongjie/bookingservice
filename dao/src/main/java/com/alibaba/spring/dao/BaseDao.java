@@ -1,44 +1,37 @@
 package com.alibaba.spring.dao;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 
+
+import javax.annotation.Resource;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
-/** 基础类
+/**
+ * 基础类
  * Created by jack on 2018/3/26.
  */
-public class BaseDao<entity> implements IDao<entity> {
+public class BaseDao<entity> /*extends HibernateDaoSupport*/ implements IDao<entity> {
 
-    /**
-     * 初始化session
-     */
-    private static final SessionFactory sessionFactory;
-    static
-    {
-        try
-        {
-            Configuration config = new Configuration().configure();
-            ServiceRegistry serviceRegistry=
-                    new ServiceRegistryBuilder().applySettings(config.getProperties())
-                            .buildServiceRegistry();
-            sessionFactory = config.buildSessionFactory(serviceRegistry);
+
+    /*@Resource(name = "sessionFactory")
+    public void setMySessionFactory(SessionFactory sessionFactory) {
+        super.setSessionFactory(sessionFactory);
+    }*/
+
+    private Class<entity> clz;
+
+    @SuppressWarnings("unchecked")
+    public Class<entity> getClz() {
+        if (clz == null) {
+            clz = (Class<entity>) ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0];
         }
-        catch(Throwable e)
-        {
-            throw new ExceptionInInitializerError(e);
-        }
+        return clz;
     }
 
 
     @Override
     public List<entity> queryAll() {
-        Session session = sessionFactory.openSession();
-
-        return null;
+        return null;//this.getHibernateTemplate().loadAll(clz);
     }
 
     @Override
